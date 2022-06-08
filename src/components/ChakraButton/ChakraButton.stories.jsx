@@ -19,3 +19,9 @@ export const Danger = () => (
 );
 // after declaring the stories and run storybook it will give errors
 // because you need to provide the theme
+
+export const Log = () => (
+  <Button colorScheme="teal" onClick={() => console.log("Log Me Clicked")}>
+    Log Me
+  </Button>
+);

@@ -1,4 +1,5 @@
 import { Box, CSSReset, theme, ThemeProvider } from "@chakra-ui/react";
+import { withConsole } from "@storybook/addon-console";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -25,4 +26,5 @@ export const decorators = [
       </Box>
     </ThemeProvider>
   ),
+  (storyFn, context) => withConsole()(storyFn)(context),
 ];
