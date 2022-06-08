@@ -1,26 +1,12 @@
-import PropTypes from "prop-types";
 import React from "react";
 import "./button.css";
 
-/**
- * Primary UI component for user interaction
- */
-const Button = ({ variant, label, ...props }) => {
+const Button = ({ variant = "primary", children, ...rest }) => {
   return (
-    <button type="button" className={`button ${variant}`} {...props}>
-      {label}
+    <button type="button" className={`button ${variant}`} {...rest}>
+      {children}
     </button>
   );
-};
-
-Button.propTypes = {
-  variant: PropTypes.string,
-  label: PropTypes.string,
-};
-
-Button.defaultProps = {
-  variant: "primary",
-  label: "primary",
 };
 
 export default Button;
