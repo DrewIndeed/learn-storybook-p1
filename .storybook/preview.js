@@ -1,5 +1,6 @@
 import { Box, CSSReset, theme, ThemeProvider } from "@chakra-ui/react";
 import { withConsole } from "@storybook/addon-console";
+import { withKnobs } from "@storybook/addon-knobs";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -27,4 +28,5 @@ export const decorators = [
     </ThemeProvider>
   ),
   (storyFn, context) => withConsole()(storyFn)(context),
+  withKnobs,
 ];
