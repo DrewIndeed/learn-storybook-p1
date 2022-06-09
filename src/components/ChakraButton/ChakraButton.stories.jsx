@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 import { action, actions } from "@storybook/addon-actions";
-import { text, boolean } from "@storybook/addon-knobs";
+import { boolean, text } from "@storybook/addon-knobs";
 import React from "react";
 
 export default {
@@ -22,7 +22,10 @@ export const Danger = () => (
 // because you need to provide the theme
 
 export const Log = () => (
-  <Button colorScheme="teal" onClick={() => console.log("Log Me Clicked")}>
+  <Button
+    colorScheme="teal"
+    onClick={() => console.log("Log Me Clicked", process.env.STORYBOOK_THEME)}
+  >
     Log Me
   </Button>
 );
