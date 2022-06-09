@@ -1,4 +1,5 @@
 import { Box, CSSReset, theme, ThemeProvider } from "@chakra-ui/react";
+import { withA11y } from "@storybook/addon-a11y";
 import { withConsole } from "@storybook/addon-console";
 import { withKnobs } from "@storybook/addon-knobs";
 
@@ -29,4 +30,5 @@ export const decorators = [
   ),
   (storyFn, context) => withConsole()(storyFn)(context),
   withKnobs,
+  withA11y,
 ];
